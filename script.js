@@ -214,7 +214,7 @@ function getHour(time) {
   }
 }
 
-// convert time to 12 hour format
+// convert time to 12 hour format and ampm format
 function covertTimeTo12HourFormat(time) {
   let hour = time.split(":")[0];
   let minute = time.split(":")[1];
@@ -316,7 +316,7 @@ searchForm.addEventListener("submit", (e) => {
   }
 });
 
-// function to conver celcius to fahrenheit
+// function to convert celcius to fahrenheit
 function celciusToFahrenheit(temp) {
   return ((temp * 9) / 5 + 32).toFixed(1);
 }
@@ -368,16 +368,12 @@ search.addEventListener("keydown", function (e) {
   var x = document.getElementById("suggestions");
   if (x) x = x.getElementsByTagName("li");
   if (e.keyCode == 40) {
-    /*If the arrow DOWN key
-      is pressed,
-      increase the currentFocus variable:*/
+    /*If the arrow DOWN key is pressed, increase the currentFocus variable:*/
     currentFocus++;
     /*and and make the current item more visible:*/
     addActive(x);
   } else if (e.keyCode == 38) {
-    /*If the arrow UP key
-      is pressed,
-      decrease the currentFocus variable:*/
+    /*If the arrow UP key is pressed, decrease the currentFocus variable:*/
     currentFocus--;
     /*and and make the current item more visible:*/
     addActive(x);
